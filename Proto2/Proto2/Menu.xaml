@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="Proto2.Menu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Proto2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0">
+            	<Run Text="Menu"/>
+            	<LineBreak/>
+            	<Run/>
+            </TextBlock>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="10,0.5,28,9">
+            <Button Content="View Job List" HorizontalAlignment="Left" Margin="213,31,0,0" VerticalAlignment="Top" Height="76" Width="146"/>
+            <Button Content="Add from XML&#xD;&#xA;" HorizontalAlignment="Left" Margin="32,147,0,0" VerticalAlignment="Top" Height="75" Width="148"/>
+            <Button Content="Add" HorizontalAlignment="Left" Margin="32,29,0,0" VerticalAlignment="Top" Height="77" Width="148"/>
+            <Button Content="Delete " HorizontalAlignment="Left" Margin="213,147,0,0" VerticalAlignment="Top" Height="76" Width="146"/>
+            <HyperlinkButton HorizontalAlignment="Left" Margin="359,233,0,0" VerticalAlignment="Top"/>
+            <HyperlinkButton Content="Help" Margin="299,233,0,26"/>
+
+        </Grid>
+    </Grid>
+</Page>
